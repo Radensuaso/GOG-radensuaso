@@ -26,11 +26,6 @@ nav.navbar {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   height: 4.5vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9;
   color: var(--whitish);
 }
 
@@ -120,7 +115,7 @@ div.jumbotron div.deals p.percentage {
   line-height: 1;
 }
 
-/*Carousel*/
+/* Highlights Carousel*/
 
 #carousel-highlights ol.carousel-indicators {
   bottom: -50px;
@@ -128,4 +123,11 @@ div.jumbotron div.deals p.percentage {
 
 #carousel-highlights ol.carousel-indicators li {
   background-color: var(--dark-yellow);
+}
+
+/* Highlights */
+
+.highlights-grid div.col-6 img {
+  width: 400px;
+  height: 150px;
 }
