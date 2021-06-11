@@ -23,3 +23,12 @@ nav.navbar div#navbarSupportedContent ul li.user a.nav-link img {
 nav.navbar div#navbarSupportedContent ul li a.nav-link {
     color: #CCC;
 }
+
+div.collapse.navbar-collapse div.icons div {
+    font-size: 20px;
+}
+
+div.collapse.navbar-collapse div.icons div span {
+    font-size: 13px;
+}
+
