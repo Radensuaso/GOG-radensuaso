@@ -18,7 +18,7 @@ body {
 }
 
 hr {
-  border-top: 1px solid var(--dark-yellow);
+  border-top: 2px solid var(--dark-yellow);
 }
 
 h6
@@ -149,6 +149,8 @@ div.jumbotron div.deals p.percentage {
   background-color: var(--dry-green);
 }
 
+/* Discount card */
+
 .discount-card div.d-flex {
   justify-content: space-between;
   align-items: center;
@@ -180,3 +182,20 @@ div.jumbotron div.deals p.percentage {
 .discount-card div.d-flex div.discount div.price span.price-now {
   font-size: 20px;
 }
+
+/*Breadcrumb*/
+nav ol.breadcrumb {
+  background-color: var(--dark-purple);
+  border-top: 2px solid var(--dark-yellow);
+  border-bottom: 2px solid var(--dark-yellow);
+}
+
+nav ol.breadcrumb div li a {
+  color: white;
+}
+
+nav ol.breadcrumb div li a span {
+  color: var(--dry-red);
+}
+
+/* flash deals */
