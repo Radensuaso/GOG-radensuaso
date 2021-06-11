@@ -121,3 +121,11 @@ div.jumbotron div.deals p.percentage {
 }
 
 /*Carousel*/
+
+#carousel-highlights ol.carousel-indicators {
+  bottom: -50px;
+}
+
+#carousel-highlights ol.carousel-indicators li {
+  background-color: var(--dark-yellow);
+}
