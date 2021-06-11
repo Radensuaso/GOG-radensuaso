@@ -1,5 +1,12 @@
+:root {
+  --source-sans-pro: "Source Sans Pro", sans-serif;
+  --caveat: "Caveat", cursive;
+  --whitish: #ccc;
+}
+
 body {
-    font-family: font-family: 'Source Sans Pro', sans-serif;
+  font-family: var(--source-sans-pro);
+  color: var(--whitish);
 }
 
 /*Nav Bar*/
@@ -7,12 +14,15 @@ nav.navbar {
   background: url(assets/navbarbg.jpg) repeat-x top center rgba(26, 26, 26, 0.9);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
-  color: #CCC;
+  height: 4.5vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-
 nav.navbar a.navbar-brand img {
-  width: 40px;
+  width: 33px;
 }
 
 nav.navbar div#navbarSupportedContent ul li.user a.nav-link img {
@@ -21,14 +31,20 @@ nav.navbar div#navbarSupportedContent ul li.user a.nav-link img {
 }
 
 nav.navbar div#navbarSupportedContent ul li a.nav-link {
-    color: #CCC;
+  color: var(--whitish);
 }
 
 div.collapse.navbar-collapse div.icons div {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 div.collapse.navbar-collapse div.icons div span {
-    font-size: 13px;
+  font-size: 13px;
 }
 
+/*Jumbotron*/
+div.jumbotron {
+  height: 35vh;
+  background: url("assets/gog-summer-sale.jpg") no-repeat center;
+  background-size: cover;
+}
