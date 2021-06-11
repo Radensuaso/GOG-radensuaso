@@ -19,6 +19,7 @@ nav.navbar {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 9;
 }
 
 nav.navbar a.navbar-brand img {
@@ -47,4 +48,53 @@ div.jumbotron {
   height: 35vh;
   background: url("assets/gog-summer-sale.jpg") no-repeat center;
   background-size: cover;
+  color: white;
+}
+
+div.jumbotron div.container.d-flex {
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.1em;
+}
+
+div.jumbotron div.container.d-flex h2 {
+  font-family: var(--caveat);
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 0;
+  text-shadow: 2px 2px 0px #000000bf;
+}
+
+div.jumbotron div.container.d-flex h1 {
+  font-weight: bolder;
+  font-size: 150px;
+  line-height: 0.9;
+  text-shadow: 2px 2px 0px #000000bf;
+}
+
+div.jumbotron div.container.d-flex > p {
+  font-family: var(--caveat);
+  font-size: 30px;
+  text-shadow: 2px 2px 0px #000000bf;
+}
+
+div.jumbotron div.container.d-flex div.deals {
+  align-self: flex-start;
+  text-shadow: 2px 2px 0px #000000bf;
+}
+
+div.jumbotron div.container.d-flex div.deals p.exclusive-dlc {
+  font-size: 20px;
+  line-height: 1;
+}
+
+div.jumbotron div.container.d-flex div.deals p.exclusive-dlc span {
+  font-size: 30px;
+}
+
+div.jumbotron div.container.d-flex div.deals p.percentage {
+  font-size: 30px;
+  line-height: 1;
 }
