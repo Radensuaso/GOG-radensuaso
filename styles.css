@@ -49,6 +49,7 @@ div.jumbotron {
   background: url("assets/gog-summer-sale.jpg") no-repeat center;
   background-size: cover;
   color: white;
+  position: relative;
 }
 
 div.jumbotron div.container.d-flex {
@@ -56,7 +57,7 @@ div.jumbotron div.container.d-flex {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 0.1em;
+  line-height: 0.1;
 }
 
 div.jumbotron div.container.d-flex h2 {
@@ -80,21 +81,23 @@ div.jumbotron div.container.d-flex > p {
   text-shadow: 2px 2px 0px #000000bf;
 }
 
-div.jumbotron div.container.d-flex div.deals {
-  align-self: flex-start;
+div.jumbotron div.deals {
   text-shadow: 2px 2px 0px #000000bf;
+  position: absolute;
+  bottom: 1%;
+  left: 17%;
 }
 
-div.jumbotron div.container.d-flex div.deals p.exclusive-dlc {
+div.jumbotron div.deals p.exclusive-dlc {
   font-size: 20px;
   line-height: 1;
 }
 
-div.jumbotron div.container.d-flex div.deals p.exclusive-dlc span {
+div.jumbotron div.deals p.exclusive-dlc span {
   font-size: 30px;
 }
 
-div.jumbotron div.container.d-flex div.deals p.percentage {
+div.jumbotron div.deals p.percentage {
   font-size: 30px;
   line-height: 1;
 }
