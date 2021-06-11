@@ -1,0 +1,25 @@
+body {
+    font-family: font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*Nav Bar*/
+nav.navbar {
+  background: url(assets/navbarbg.jpg) repeat-x top center rgba(26, 26, 26, 0.9);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: #CCC;
+}
+
+
+nav.navbar a.navbar-brand img {
+  width: 40px;
+}
+
+nav.navbar div#navbarSupportedContent ul li.user a.nav-link img {
+  border-radius: 50%;
+  width: 20px;
+}
+
+nav.navbar div#navbarSupportedContent ul li a.nav-link {
+    color: #CCC;
+}
