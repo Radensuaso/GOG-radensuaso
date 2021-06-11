@@ -1,17 +1,28 @@
+/*variables*/
 :root {
   --source-sans-pro: "Source Sans Pro", sans-serif;
   --caveat: "Caveat", cursive;
   --whitish: #ccc;
+  --dark-purple: #1c0d26;
+  --dark-yellow: #f4b13d;
 }
+
+/*common*/
 
 body {
   font-family: var(--source-sans-pro);
-  color: var(--whitish);
+  background-color: var(--dark-purple);
+  color: white;
 }
+
+hr {
+  border-top: 1px solid var(--dark-yellow);
+}
+
+h6
 
 /*Nav Bar*/
 nav.navbar {
-  background: url(assets/navbarbg.jpg) repeat-x top center rgba(26, 26, 26, 0.9);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   height: 4.5vh;
@@ -20,6 +31,11 @@ nav.navbar {
   left: 0;
   right: 0;
   z-index: 9;
+  color: var(--whitish);
+}
+
+.bg-nav-gog {
+  background: url(assets/navbarbg.jpg) repeat-x top center rgba(26, 26, 26, 0.9) !important;
 }
 
 nav.navbar a.navbar-brand img {
@@ -48,8 +64,10 @@ div.jumbotron {
   height: 35vh;
   background: url("assets/gog-summer-sale.jpg") no-repeat center;
   background-size: cover;
-  color: white;
   position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 div.jumbotron div.container.d-flex {
@@ -101,3 +119,5 @@ div.jumbotron div.deals p.percentage {
   font-size: 30px;
   line-height: 1;
 }
+
+/*Carousel*/
