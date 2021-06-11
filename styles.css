@@ -5,6 +5,8 @@
   --whitish: #ccc;
   --dark-purple: #1c0d26;
   --dark-yellow: #f4b13d;
+  --dry-green: #1d7261;
+  --dry-red: #d94969;
 }
 
 /*common*/
@@ -127,7 +129,54 @@ div.jumbotron div.deals p.percentage {
 
 /* Highlights */
 
+.highlights-grid div.col-6 {
+  height: 200px;
+}
+
 .highlights-grid div.col-6 img {
   width: 400px;
   height: 150px;
+}
+
+.discount-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  height: 45%;
+  background-color: var(--dry-green);
+}
+
+.discount-card div.d-flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discount-card div.d-flex i {
+  color: var(--dark-yellow);
+  font-size: 11px;
+}
+
+.discount-card div.d-flex div.discount div.percentage {
+  background-color: var(--dry-red);
+  border-radius: 3px;
+  padding: 3px 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.discount-card div.d-flex div.discount div.price {
+  text-align: right;
+  line-height: 0.9;
+}
+
+.discount-card div.d-flex div.discount div.price span.crossed-price {
+  color: var(--dark-yellow);
+  text-decoration: line-through;
+}
+
+.discount-card div.d-flex div.discount div.price span.price-now {
+  font-size: 20px;
 }
