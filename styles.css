@@ -18,9 +18,12 @@ body {
 }
 
 hr {
-  border-top: 2px solid var(--dark-yellow);
+  border-top: 1px solid var(--dark-yellow);
 }
 
+h6 {
+  font-weight: bolder;
+}
 /*Nav Bar*/
 nav.navbar {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -117,11 +120,11 @@ div.jumbotron div.deals p.percentage {
 
 /* Highlights Carousel*/
 
-#carousel-highlights ol.carousel-indicators {
+div.carousel ol.carousel-indicators {
   bottom: -50px;
 }
 
-#carousel-highlights ol.carousel-indicators li {
+div.carousel ol.carousel-indicators li {
   background-color: var(--dark-yellow);
 }
 
@@ -176,8 +179,8 @@ div.discount div.price span.price-now {
 /*Breadcrumb*/
 nav ol.breadcrumb {
   background-color: var(--dark-purple);
-  border-top: 2px solid var(--dark-yellow);
-  border-bottom: 2px solid var(--dark-yellow);
+  border-top: 1px solid var(--dark-yellow);
+  border-bottom: 1px solid var(--dark-yellow);
 }
 
 nav ol.breadcrumb div li a {
