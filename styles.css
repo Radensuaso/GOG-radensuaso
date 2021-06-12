@@ -28,7 +28,7 @@ h6 {
 nav.navbar {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
-  height: 4.5vh;
+  height: 60px;
   color: var(--whitish);
 }
 
@@ -59,7 +59,7 @@ div.collapse.navbar-collapse div.icons div span {
 
 /*Jumbotron*/
 div.jumbotron {
-  height: 35vh;
+  height: 400px;
   background: url("assets/gog-summer-sale.jpg") no-repeat center;
   background-size: cover;
   position: relative;
