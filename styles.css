@@ -143,7 +143,8 @@ div.game-card div.card-body div.d-flex {
 }
 
 div.game-card img {
-  height: 170px;
+  height: 180px;
+  width: 1000px;
 }
 
 /* game-card discount */
