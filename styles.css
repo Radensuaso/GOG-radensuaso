@@ -176,17 +176,30 @@ div.discount div.price span.price-now {
   font-weight: bold;
 }
 
-/*Breadcrumb*/
-nav ol.breadcrumb {
+/*link Gog galaxy*/
+div.gog-galaxy {
   background-color: var(--dark-purple);
   border-top: 1px solid var(--dark-yellow);
   border-bottom: 1px solid var(--dark-yellow);
 }
 
-nav ol.breadcrumb div li a {
+div.gog-galaxy a {
   color: white;
 }
 
-nav ol.breadcrumb div li a span {
+div.gog-galaxy span {
   color: var(--dry-red);
+}
+
+div.gog-galaxy hr {
+  border-top: 1px solid #2e2a31;
+}
+
+.text-large {
+  font-size: 1.1rem;
+}
+
+div.gog-galaxy span.separator {
+  font-size: 3em;
+  color: #2e2a31;
 }
