@@ -21,8 +21,6 @@ hr {
   border-top: 2px solid var(--dark-yellow);
 }
 
-h6
-
 /*Nav Bar*/
 nav.navbar {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -127,60 +125,51 @@ div.jumbotron div.deals p.percentage {
   background-color: var(--dark-yellow);
 }
 
-/* Highlights */
-
-.highlights-grid div.col-6 {
-  height: 200px;
+/* Operating system */
+i.operating-system {
+  font-size: 0.9rem;
+  color: var(--dark-yellow);
 }
 
-.highlights-grid div.col-6 img {
-  width: 400px;
-  height: 150px;
-}
+/* game-cards */
 
-.discount-card {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 90%;
-  height: 45%;
+div.game-card div.card-body {
   background-color: var(--dry-green);
 }
 
-/* Discount card */
-
-.discount-card div.d-flex {
+div.game-card div.card-body div.d-flex {
   justify-content: space-between;
   align-items: center;
 }
 
-.discount-card div.d-flex i {
-  color: var(--dark-yellow);
-  font-size: 11px;
+div.game-card img {
+  height: 15vh;
 }
 
-.discount-card div.d-flex div.discount div.percentage {
+/* game-card discount */
+
+div.discount div.percentage {
   background-color: var(--dry-red);
   border-radius: 3px;
   padding: 3px 5px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
-.discount-card div.d-flex div.discount div.price {
+div.discount div.price {
   text-align: right;
   line-height: 0.9;
 }
 
-.discount-card div.d-flex div.discount div.price span.crossed-price {
+div.discount div.price span.crossed-price {
   color: var(--dark-yellow);
+  font-size: 0.9rem;
   text-decoration: line-through;
 }
 
-.discount-card div.d-flex div.discount div.price span.price-now {
-  font-size: 20px;
+div.discount div.price span.price-now {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /*Breadcrumb*/
@@ -197,5 +186,3 @@ nav ol.breadcrumb div li a {
 nav ol.breadcrumb div li a span {
   color: var(--dry-red);
 }
-
-/* flash deals */
