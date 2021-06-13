@@ -203,3 +203,27 @@ div.gog-galaxy span.separator {
   font-size: 3em;
   color: #2e2a31;
 }
+
+/* Nav Tabs */
+
+ul.nav-tabs {
+  border-color: var(--dark-yellow);
+}
+
+ul.nav-tabs a {
+  color: var(--dark-yellow);
+}
+
+.nav-tabs .nav-name {
+  margin-bottom: -1px;
+  border: 0px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: var(--dry-red);
+  background-color: transparent;
+  border-color: transparent transparent var(--dry-red);
+}
