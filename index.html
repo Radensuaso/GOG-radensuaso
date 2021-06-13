@@ -1723,9 +1723,6 @@
     <!-- Now on Sale -->
     <div class="container-xl">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <!--  <h6>
-          <i class="fas fa-percentage pr-2"></i>Now on sale
-        </h6> -->
         <li class="nav-item" role="presentation">
           <h6 class="nav-name nav-link">
             <i class="fas fa-percentage pr-2"></i>Now on sale
@@ -1776,7 +1773,7 @@
             role="button"
             aria-haspopup="true"
             aria-expanded="false"
-            >Dropdown</a
+            >More</a
           >
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Best sellers</a>
@@ -1785,6 +1782,7 @@
           </div>
         </li>
       </ul>
+
       <div class="tab-content" id="myTabContent">
         <div
           class="tab-pane fade show active"
@@ -1792,7 +1790,113 @@
           role="tabpanel"
           aria-labelledby="featured-deals-tab"
         >
-          ...
+          <div
+            id="carousel-featured-deals"
+            class="carousel slide featured-deals-carousel mt-3"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carousel-featured-deals"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#carousel-featured-deals" data-slide-to="1"></li>
+              <li data-target="#carousel-featured-deals" data-slide-to="2"></li>
+              <li data-target="#carousel-featured-deals" data-slide-to="3"></li>
+              <li data-target="#carousel-featured-deals" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-12 col-sm-6 col-md-3">
+                    <div
+                      class="big-discount-bundle card border-0"
+                      style="width: 15rem; height: 25rem"
+                    >
+                      <div class="card-body star-wars-bundle d-flex">
+                        <span class="bundle-name">Name of the bundle</span>
+                        <span class="yellow-discount">90%</span>
+                        <a href="#" class="btn btn-outline-light"
+                          >Browse deals</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3">
+                    <div
+                      class="big-discount-bundle card border-0"
+                      style="width: 15rem; height: 25rem"
+                    >
+                      <div class="card-body ubisoft-bundle d-flex">
+                        <span class="bundle-name">Name of the bundle</span>
+                        <span class="yellow-discount">90%</span>
+                        <a href="#" class="btn btn-outline-light"
+                          >Browse deals</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3">
+                    <div
+                      class="big-discount-bundle card border-0"
+                      style="width: 15rem; height: 25rem"
+                    >
+                      <div class="card-body rpg-bundle d-flex">
+                        <span class="bundle-name">Name of the bundle</span>
+                        <span class="yellow-discount">90%</span>
+                        <a href="#" class="btn btn-outline-light"
+                          >Browse deals</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3">
+                    <div
+                      class="big-discount-bundle card border-0"
+                      style="width: 15rem; height: 25rem"
+                    >
+                      <div class="card-body highest-bundle d-flex">
+                        <span class="bundle-name">Name of the bundle</span>
+                        <span class="yellow-discount">90%</span>
+                        <a href="#" class="btn btn-outline-light"
+                          >Browse deals</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item"></div>
+              <div class="carousel-item"></div>
+              <div class="carousel-item"></div>
+              <div class="carousel-item"></div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carousel-featured-deals"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carousel-featured-deals"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
         <div
           class="tab-pane fade"

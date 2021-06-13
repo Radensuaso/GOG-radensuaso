@@ -227,3 +227,52 @@ ul.nav-tabs a {
   background-color: transparent;
   border-color: transparent transparent var(--dry-red);
 }
+
+ul.nav-tabs li.dropdown div.dropdown-menu {
+  background-color: var(--dark-purple);
+}
+
+/* big-discount-bundle card */
+
+.big-discount-bundle div.card-body {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.big-discount-bundle div.card-body span.bundle-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.big-discount-bundle div.card-body span.yellow-discount {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: var(--dark-yellow);
+}
+
+.big-discount-bundle div.card-body a {
+  background-color: rgb(255 255 255 / 35%);
+}
+/*different bundles*/
+
+.big-discount-bundle div.card-body.star-wars-bundle {
+  box-shadow: rgb(38 77 156 / 75%) 0px 0px 0px 1000px inset;
+  background-image: url(assets/big-discount-1.jpg);
+}
+
+.big-discount-bundle div.card-body.ubisoft-bundle {
+  box-shadow: rgb(26 142 98 / 75%) 0px 0px 0px 1000px inset;
+  background-image: url(assets/big-discount-2.jpg);
+}
+
+.big-discount-bundle div.card-body.rpg-bundle {
+  box-shadow: rgb(50 129 165 / 75%) 0px 0px 0px 1000px inset;
+  background-image: url(assets/big-discount-3.jpg);
+}
+
+.big-discount-bundle div.card-body.highest-bundle {
+  box-shadow: rgb(180 102 49 / 75%) 0px 0px 0px 1000px inset;
+  background-image: url(assets/big-discount-4.jpg);
+}
