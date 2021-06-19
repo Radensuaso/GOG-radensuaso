@@ -140,6 +140,13 @@ div.game-card div.card-body {
   background-color: var(--dry-green);
 }
 
+div.game-card div.card-body h5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 div.game-card div.card-body div.d-flex {
   justify-content: space-between;
   align-items: center;
@@ -152,26 +159,26 @@ div.game-card img {
 
 /* game-card discount */
 
-div.discount div.percentage {
+div.percentage {
   background-color: var(--dry-red);
   border-radius: 3px;
-  padding: 3px 5px;
+  padding: 0 5px;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
-div.discount div.price {
+div.price {
   text-align: right;
   line-height: 0.9;
 }
 
-div.discount div.price span.crossed-price {
+span.crossed-price {
   color: var(--dark-yellow);
   font-size: 0.9rem;
   text-decoration: line-through;
 }
 
-div.discount div.price span.price-now {
+span.price-now {
   font-size: 1.5rem;
   font-weight: bold;
 }

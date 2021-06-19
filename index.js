@@ -165,8 +165,20 @@ const games = [
 ]
 
 window.onload = function () {
-  generateHighlight()
+  // add 4 cols to highlights row
+  const highlightsRow = document.querySelector("div.highlights > div.row")
+  generate4Cards(highlightsRow, gameCounter)
+  gameCounter += 4
+  // add 4 and then 3 cols to flash deals row
+  const flashDealsRow = document.querySelector(".flash-deals div.row")
+  generate4Cards(flashDealsRow, gameCounter)
+  gameCounter += 4
+  generate3Cards(flashDealsRow, gameCounter)
+  gameCounter += 3
 }
+
+// game counter to increment each time we add cards
+let gameCounter = 0
 
 // function to generate game cards
 function generateGameCard(gamesIndex) {
@@ -176,7 +188,7 @@ function generateGameCard(gamesIndex) {
     gameCard.innerHTML = `<img
       src="${games[gamesIndex].image}"
       class="card-img-top img-fluid"
-      alt="..."
+      alt="${games[gamesIndex].image}"
     />
     <div class="card-body">
       <h5 class="card-title">${games[gamesIndex].gameName}</h5>
@@ -193,7 +205,7 @@ function generateGameCard(gamesIndex) {
     gameCard.innerHTML = `<img
     src="${games[gamesIndex].image}"
     class="card-img-top img-fluid"
-    alt="..."
+    alt="${games[gamesIndex].image}"
   />
   <div class="card-body">
     <h5 class="card-title">${games[gamesIndex].gameName}</h5>
@@ -219,16 +231,43 @@ function generateGameCard(gamesIndex) {
   return gameCard
 }
 
-// function to generate cards in the highlight row
+// function to generate 4 cols with game cards
 
-function generateHighlight() {
-  // get the row
-  const highlightsRow = document.querySelector("div.highlights > div.row")
-  // for loop to create 4 cols
-  for (let i = 0; i < 4; i++) {
+function generate4Cards(row, counter) {
+  let cap = counter + 4
+  let i = counter
+  for (i; i < cap; i++) {
+    if (i === games.length) {
+      const currentI = i
+      i = 0
+      cap = 4 - (currentI - counter)
+    }
     const col = document.createElement("div")
     col.classList.add("col-12", "col-sm-6", "col-md-3", "mb-3")
     col.appendChild(generateGameCard(i))
-    highlightsRow.appendChild(col)
+    row.appendChild(col)
+  }
+  if (gameCounter + 4 >= games.length) {
+    gameCounter = i
+  }
+}
+
+// function to generate 3 cols with game cards
+function generate3Cards(row, counter) {
+  let cap = counter + 3
+  let i = counter
+  for (i; i < cap; i++) {
+    if (i === games.length) {
+      const currentI = i
+      i = 0
+      cap = 3 - (currentI - counter)
+    }
+    const col = document.createElement("div")
+    col.classList.add("col-12", "col-md-6", "col-lg-4", "mb-3")
+    col.appendChild(generateGameCard(i))
+    row.appendChild(col)
+  }
+  if (gameCounter + 3 >= games.length) {
+    gameCounter = i
   }
 }
