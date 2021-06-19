@@ -172,18 +172,26 @@ window.onload = function () {
   // add 4 and then 3 cols to flash deals row
   const flashDealsRow = document.querySelector(".flash-deals div.row")
   generate4Cards(flashDealsRow, gameCounter)
-  gameCounter += 4
   generate3Cards(flashDealsRow, gameCounter)
-  gameCounter += 3
+  // add cols to the slides rows of the summer carousel
+  const carouselSlideArray = document.querySelectorAll(
+    "#carousel-summer .carousel-inner .carousel-item .row"
+  )
+  for (const carouselSlide of carouselSlideArray) {
+    generate3Cards(carouselSlide, gameCounter)
+    generate4Cards(carouselSlide, gameCounter)
+    generate3Cards(carouselSlide, gameCounter)
+  }
 }
 
 // game counter to increment each time we add cards
-let gameCounter = 0
+let gameCounter = 3
 
 // function to generate game cards
 function generateGameCard(gamesIndex) {
   const gameCard = document.createElement("div")
   gameCard.classList.add("game-card", "card", "border-0")
+  //There are two versions of the cards, one with discount one without
   if (games[gamesIndex].discountPercentage === 0) {
     gameCard.innerHTML = `<img
       src="${games[gamesIndex].image}"
@@ -234,25 +242,32 @@ function generateGameCard(gamesIndex) {
 // function to generate 4 cols with game cards
 
 function generate4Cards(row, counter) {
+  //it's 4 columns so sou the cap will be the counter plus 4
   let cap = counter + 4
+  // i is being set outside the loop because we need to use it outside the loop
   let i = counter
   for (i; i < cap; i++) {
+    /*this part of the code is to check if the games array is at an end if so start over and adjust the cap*/
     if (i === games.length) {
       const currentI = i
       i = 0
       cap = 4 - (currentI - counter)
     }
+    //generate the cols in the row and append one card
     const col = document.createElement("div")
     col.classList.add("col-12", "col-sm-6", "col-md-3", "mb-3")
     col.appendChild(generateGameCard(i))
     row.appendChild(col)
   }
-  if (gameCounter + 4 >= games.length) {
+  /* this adds 4 games to the gameCounter and checks if the gameCounter is superior to games length if so restart it from the i where the loop left over */
+  gameCounter += 4
+  if (gameCounter >= games.length) {
     gameCounter = i
   }
 }
 
 // function to generate 3 cols with game cards
+/* this function uses the same logic of the one above, but this one generates only 3 cols */
 function generate3Cards(row, counter) {
   let cap = counter + 3
   let i = counter
@@ -267,7 +282,8 @@ function generate3Cards(row, counter) {
     col.appendChild(generateGameCard(i))
     row.appendChild(col)
   }
-  if (gameCounter + 3 >= games.length) {
+  gameCounter += 3
+  if (gameCounter >= games.length) {
     gameCounter = i
   }
 }
