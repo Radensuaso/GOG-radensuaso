@@ -179,6 +179,11 @@ div.gog-galaxy span.separator {
   color: #2e2a31;
 }
 
+/* summer carousel */
+#carousel-summer .carousel-inner .carousel-item {
+  height: 57rem;
+}
+
 /* Nav Tabs */
 
 ul.nav-tabs {
@@ -214,40 +219,66 @@ ul.nav-tabs li.dropdown div.dropdown-menu {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  text-shadow: 1px 1px 0px #303030;
 }
 
 .big-discount-bundle div.card-body span.bundle-name {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.big-discount-bundle div.card-body span.up-to {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--dark-yellow);
 }
 
 .big-discount-bundle div.card-body span.yellow-discount {
-  font-size: 4rem;
-  font-weight: bolder;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 64px;
   color: var(--dark-yellow);
 }
 
 .big-discount-bundle div.card-body a {
   background-color: rgb(255 255 255 / 35%);
 }
+
+/* Carousel featured deals */
 /*different bundles*/
 
 .big-discount-bundle div.card-body.star-wars-bundle {
   box-shadow: rgb(38 77 156 / 75%) 0px 0px 0px 1000px inset;
   background-image: url(assets/big-discount-1.jpg);
+  background-size: cover;
 }
 
 .big-discount-bundle div.card-body.ubisoft-bundle {
   box-shadow: rgb(26 142 98 / 75%) 0px 0px 0px 1000px inset;
   background-image: url(assets/big-discount-2.jpg);
+  background-size: cover;
 }
 
 .big-discount-bundle div.card-body.rpg-bundle {
   box-shadow: rgb(50 129 165 / 75%) 0px 0px 0px 1000px inset;
   background-image: url(assets/big-discount-3.jpg);
+  background-size: cover;
 }
 
 .big-discount-bundle div.card-body.highest-bundle {
   box-shadow: rgb(180 102 49 / 75%) 0px 0px 0px 1000px inset;
   background-image: url(assets/big-discount-4.jpg);
+  background-size: cover;
 }
+
+div.big-discount-bundle {
+  width: 17rem;
+  height: 37rem;
+}
+
+#carousel-featured-deals .carousel-inner .carousel-item {
+  height: 38rem;
+}
+
+/* Now on Sale tabs*/

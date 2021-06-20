@@ -173,14 +173,32 @@ window.onload = function () {
   const flashDealsRow = document.querySelector(".flash-deals div.row")
   generate4Cards(flashDealsRow, gameCounter)
   generate3Cards(flashDealsRow, gameCounter)
-  // add cols to the slides rows of the summer carousel
-  const carouselSlideArray = document.querySelectorAll(
+  // add card to the slides rows of the summer carousel
+  const highlightsCarouselSlideArray = document.querySelectorAll(
     "#carousel-summer .carousel-inner .carousel-item .row"
   )
-  for (const carouselSlide of carouselSlideArray) {
+  for (const carouselSlide of highlightsCarouselSlideArray) {
     generate3Cards(carouselSlide, gameCounter)
     generate4Cards(carouselSlide, gameCounter)
     generate3Cards(carouselSlide, gameCounter)
+  }
+  // add cards to featured deals carousel slides except to the first one
+  const carouselFeaturedDealsSlidesArray = document.querySelectorAll(
+    "#carousel-featured-deals .carousel-inner .carousel-item .row"
+  )
+  for (let i = 1; i < carouselFeaturedDealsSlidesArray.length; i++) {
+    const carouselSlide = carouselFeaturedDealsSlidesArray[i]
+    generate4Cards(carouselSlide, gameCounter)
+    generate4Cards(carouselSlide, gameCounter)
+  }
+  //add cards to Now on sale tabs except to the first one
+  const nowOnSaleTabsArray = document.querySelectorAll(
+    "#now-on-sale .tab-pane .row"
+  )
+  for (let i = 1; i < nowOnSaleTabsArray.length; i++) {
+    const nowOnSaleTab = nowOnSaleTabsArray[i]
+    generate4Cards(nowOnSaleTab, gameCounter)
+    generate4Cards(nowOnSaleTab, gameCounter)
   }
 }
 
