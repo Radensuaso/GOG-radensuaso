@@ -133,6 +133,7 @@ div.percentage {
   padding: 0 5px;
   font-weight: bold;
   font-size: 1.5rem;
+  height: 2.1rem;
 }
 
 div.price {
@@ -284,4 +285,34 @@ div.big-discount-bundle {
 /* Now on Sale tabs*/
 #now-on-sale {
   height: 40rem;
+}
+
+/* Discover Games Table */
+#discover-games .tab-pane table {
+  color: white;
+}
+
+#discover-games .tab-pane table tbody tr th,
+#discover-games .tab-pane table tbody tr td {
+  border-top: 0;
+  border-bottom: 1px solid var(--dark-yellow);
+}
+
+#discover-games .tab-pane table tbody tr th {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#discover-games .tab-pane table tr th img {
+  width: 8.5rem;
+  height: 5rem;
+}
+
+#discover-games .tab-pane table tr th,
+#discover-games .tab-pane table tr td {
+  height: 7rem;
+}
+
+#discover-games .tab-pane table tr td > .discount {
+  height: 100%;
 }
