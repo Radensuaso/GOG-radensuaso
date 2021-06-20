@@ -200,6 +200,13 @@ window.onload = function () {
     generate4Cards(nowOnSaleTab, gameCounter)
     generate4Cards(nowOnSaleTab, gameCounter)
   }
+  //add rows to the tables/*  */
+  const tableBodiesArray = document.querySelectorAll(
+    "#discover-games div.tab-pane table tbody"
+  )
+  for (const tableBody of tableBodiesArray) {
+    generate10TableRows(tableBody, gameCounter)
+  }
 }
 
 // game counter to increment each time we add cards
@@ -301,6 +308,101 @@ function generate3Cards(row, counter) {
     row.appendChild(col)
   }
   gameCounter += 3
+  if (gameCounter >= games.length) {
+    gameCounter = i
+  }
+}
+
+// function to generate rows for the table
+function generateTableRows(gamesIndex) {
+  const tableRow = document.createElement("tr")
+  //There are two versions of rows, one with discount one without
+  if (games[gamesIndex].discountPercentage === 0) {
+    tableRow.innerHTML = `<th scope="row">
+    <div class="d-flex align-items-center">
+      <img
+        class="img-fluid mr-3"
+        src="${games[gamesIndex].image}"
+        alt="${games[gamesIndex].gameName}"
+      />
+      <div class="d-flex flex-column">
+        <span>${games[gamesIndex].gameName}</span>
+        <span
+          ><i class="operating-system fab fa-windows"></i
+        ></span>
+      </div>
+    </div>
+  </th>
+  <td>
+    <div
+      class="
+        discount
+        d-flex
+        justify-content-end
+        align-items-center
+      "
+    >
+      <div class="price">
+      <span class="price-now">€${games[gamesIndex].price}</span>
+      </div>
+    </div>
+  </td>`
+  } else {
+    tableRow.innerHTML = `<th scope="row">
+    <div class="d-flex align-items-center">
+      <img
+        class="img-fluid mr-3"
+        src="${games[gamesIndex].image}"
+        alt="${games[gamesIndex].gameName}"
+      />
+      <div class="d-flex flex-column">
+        <span>${games[gamesIndex].gameName}</span>
+        <span
+          ><i class="operating-system fab fa-windows"></i
+        ></span>
+      </div>
+    </div>
+  </th>
+  <td>
+    <div
+      class="
+        discount
+          d-flex
+          justify-content-end
+          align-items-center
+        "
+      >
+        <div class="percentage mx-2">-${
+          games[gamesIndex].discountPercentage
+        }%</div>
+        <div class="price">
+        <span class="crossed-price">${games[gamesIndex].price}€</span>
+        <br /><span class="price-now">${(
+          games[gamesIndex].price -
+          (games[gamesIndex].price * games[gamesIndex].discountPercentage) / 100
+        ).toFixed(2)}€</span>
+        </div>
+      </div>
+    </td>`
+  }
+
+  return tableRow
+}
+
+// generate 10 table rows
+// this function uses the same logic as to generate the cards
+function generate10TableRows(tBody, counter) {
+  let cap = counter + 10
+  let i = counter
+  for (i; i < cap; i++) {
+    if (i === games.length) {
+      const currentI = i
+      i = 0
+      cap = 10 - (currentI - counter)
+    }
+    tBody.appendChild(generateTableRows(i))
+  }
+  gameCounter += 10
   if (gameCounter >= games.length) {
     gameCounter = i
   }

@@ -104,8 +104,16 @@ i.operating-system {
 
 /* game-cards */
 
+div.game-card {
+  cursor: pointer;
+}
+
 div.game-card div.card-body {
   background-color: var(--dry-green);
+}
+
+div.game-card:hover div.card-body {
+  background-color: var(--dark-yellow);
 }
 
 div.game-card div.card-body h5 {
@@ -305,14 +313,27 @@ div.big-discount-bundle {
 
 #discover-games .tab-pane table tr th img {
   width: 8.5rem;
-  height: 5rem;
+  height: 4rem;
 }
 
 #discover-games .tab-pane table tr th,
 #discover-games .tab-pane table tr td {
-  height: 7rem;
+  height: 4rem;
 }
 
 #discover-games .tab-pane table tr td > .discount {
   height: 100%;
+}
+
+#discover-games .tab-pane table tr {
+  cursor: pointer;
+}
+
+#discover-games .tab-pane table tr:hover {
+  background-color: var(--dark-yellow);
+}
+
+/* Featured*/
+#featured > div.d-flex {
+  cursor: pointer;
 }
