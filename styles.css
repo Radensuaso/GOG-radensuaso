@@ -60,48 +60,16 @@ div.collapse.navbar-collapse div.icons div span {
 /*Jumbotron*/
 div.jumbotron {
   height: 400px;
-  background: url("assets/gog-summer-sale.jpg") no-repeat center;
-  background-size: cover;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
+  background: url("./assets/summer-sale.png") no-repeat center;
 }
 
-div.jumbotron div.container.d-flex {
+div.jumbotron div.container-xl {
   height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 0.1;
-}
-
-div.jumbotron div.container.d-flex h2 {
-  font-family: var(--caveat);
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 0;
-  text-shadow: 2px 2px 0px #000000bf;
-}
-
-div.jumbotron div.container.d-flex h1 {
-  font-weight: bolder;
-  font-size: 150px;
-  line-height: 0.9;
-  text-shadow: 2px 2px 0px #000000bf;
-}
-
-div.jumbotron div.container.d-flex > p {
-  font-family: var(--caveat);
-  font-size: 30px;
-  text-shadow: 2px 2px 0px #000000bf;
+  align-items: flex-end;
 }
 
 div.jumbotron div.deals {
   text-shadow: 2px 2px 0px #000000bf;
-  position: absolute;
-  bottom: 1%;
-  left: 17%;
 }
 
 div.jumbotron div.deals p.exclusive-dlc {
