@@ -399,15 +399,20 @@ ul li a:hover {
 /* Middle footer */
 #middle-footer {
   background-color: var(--light-gray);
+}
+#middle-footer,
+#bottom-footer {
   color: var(--gray-footer-links);
   font-size: 12px;
 }
 
-#middle-footer ul li {
+#middle-footer ul li,
+#bottom-footer ul li {
   margin-right: 0.5rem;
 }
 
-#middle-footer ul li a {
+#middle-footer ul li a,
+#bottom-footer ul li a {
   color: var(--gray-footer-links);
   font-size: 12px;
   cursor: pointer;
@@ -438,4 +443,8 @@ ul li a:hover {
 /* bottom footer */
 #bottom-footer {
   background: url(assets/navbarbg.jpg) repeat-x bottom center var(--dark-gray);
+}
+
+#bottom-footer img {
+  width: 5rem;
 }
