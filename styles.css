@@ -345,6 +345,12 @@ div.big-discount-bundle {
 }
 
 /* footer */
+footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 /* top footer */
 #top-footer {
   background-color: var(--dark-gray);
@@ -411,6 +417,24 @@ ul li a:hover {
   color: #c781db !important;
 }
 
+.galaxy-button {
+  background: url(assets/galaxy_button_bg.jpg);
+  color: white !important;
+  font-size: 16px;
+  line-height: 13px;
+  border-radius: 10px;
+  border: 2px solid rgb(255 255 255 / 21%);
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 28%);
+  cursor: pointer;
+}
+
+.galaxy-button:hover {
+  border: 6px solid rgb(255 255 255 / 21%);
+}
+
+.for-windows {
+  font-size: 10px;
+}
 /* bottom footer */
 #bottom-footer {
   background: url(assets/navbarbg.jpg) repeat-x bottom center var(--dark-gray);
