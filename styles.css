@@ -7,6 +7,12 @@
   --dark-yellow: #f4b13d;
   --dry-green: #1d7261;
   --dry-red: #d94969;
+  --dark-gray: #262626;
+  --light-gray: #2f2f2f;
+  --gray-footer-links: #848484;
+  --facebook-link: #3e4e70;
+  --twitter-link: #2d6d96;
+  --twitch-purple: #6441a4;
 }
 
 /*common*/
@@ -60,48 +66,16 @@ div.collapse.navbar-collapse div.icons div span {
 /*Jumbotron*/
 div.jumbotron {
   height: 400px;
-  background: url("assets/gog-summer-sale.jpg") no-repeat center;
-  background-size: cover;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
+  background: url("./assets/summer-sale.png") no-repeat center;
 }
 
-div.jumbotron div.container.d-flex {
+div.jumbotron div.container-xl {
   height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 0.1;
-}
-
-div.jumbotron div.container.d-flex h2 {
-  font-family: var(--caveat);
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 0;
-  text-shadow: 2px 2px 0px #000000bf;
-}
-
-div.jumbotron div.container.d-flex h1 {
-  font-weight: bolder;
-  font-size: 150px;
-  line-height: 0.9;
-  text-shadow: 2px 2px 0px #000000bf;
-}
-
-div.jumbotron div.container.d-flex > p {
-  font-family: var(--caveat);
-  font-size: 30px;
-  text-shadow: 2px 2px 0px #000000bf;
+  align-items: flex-end;
 }
 
 div.jumbotron div.deals {
   text-shadow: 2px 2px 0px #000000bf;
-  position: absolute;
-  bottom: 1%;
-  left: 17%;
 }
 
 div.jumbotron div.deals p.exclusive-dlc {
@@ -136,8 +110,23 @@ i.operating-system {
 
 /* game-cards */
 
+div.game-card {
+  cursor: pointer;
+}
+
 div.game-card div.card-body {
   background-color: var(--dry-green);
+}
+
+div.game-card:hover div.card-body {
+  background-color: var(--dark-yellow);
+}
+
+div.game-card div.card-body h5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 div.game-card div.card-body div.d-flex {
@@ -152,26 +141,27 @@ div.game-card img {
 
 /* game-card discount */
 
-div.discount div.percentage {
+div.percentage {
   background-color: var(--dry-red);
   border-radius: 3px;
-  padding: 3px 5px;
+  padding: 0 5px;
   font-weight: bold;
   font-size: 1.5rem;
+  height: 2.1rem;
 }
 
-div.discount div.price {
+div.price {
   text-align: right;
   line-height: 0.9;
 }
 
-div.discount div.price span.crossed-price {
+span.crossed-price {
   color: var(--dark-yellow);
   font-size: 0.9rem;
   text-decoration: line-through;
 }
 
-div.discount div.price span.price-now {
+span.price-now {
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -202,6 +192,11 @@ div.gog-galaxy hr {
 div.gog-galaxy span.separator {
   font-size: 3em;
   color: #2e2a31;
+}
+
+/* summer carousel */
+#carousel-summer .carousel-inner .carousel-item {
+  height: 57rem;
 }
 
 /* Nav Tabs */
@@ -239,40 +234,217 @@ ul.nav-tabs li.dropdown div.dropdown-menu {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  text-shadow: 1px 1px 0px #303030;
 }
 
 .big-discount-bundle div.card-body span.bundle-name {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.big-discount-bundle div.card-body span.up-to {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--dark-yellow);
 }
 
 .big-discount-bundle div.card-body span.yellow-discount {
-  font-size: 4rem;
-  font-weight: bolder;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 64px;
   color: var(--dark-yellow);
 }
 
 .big-discount-bundle div.card-body a {
   background-color: rgb(255 255 255 / 35%);
 }
+
+/* Carousel featured deals */
 /*different bundles*/
 
 .big-discount-bundle div.card-body.star-wars-bundle {
   box-shadow: rgb(38 77 156 / 75%) 0px 0px 0px 1000px inset;
   background-image: url(assets/big-discount-1.jpg);
+  background-size: cover;
 }
 
 .big-discount-bundle div.card-body.ubisoft-bundle {
   box-shadow: rgb(26 142 98 / 75%) 0px 0px 0px 1000px inset;
   background-image: url(assets/big-discount-2.jpg);
+  background-size: cover;
 }
 
 .big-discount-bundle div.card-body.rpg-bundle {
   box-shadow: rgb(50 129 165 / 75%) 0px 0px 0px 1000px inset;
   background-image: url(assets/big-discount-3.jpg);
+  background-size: cover;
 }
 
 .big-discount-bundle div.card-body.highest-bundle {
   box-shadow: rgb(180 102 49 / 75%) 0px 0px 0px 1000px inset;
   background-image: url(assets/big-discount-4.jpg);
+  background-size: cover;
+}
+
+div.big-discount-bundle {
+  width: 17rem;
+  height: 37rem;
+}
+
+#carousel-featured-deals .carousel-inner .carousel-item {
+  height: 38rem;
+}
+
+/* Now on Sale tabs*/
+#now-on-sale {
+  height: 40rem;
+}
+
+/* Discover Games Table */
+#discover-games .tab-pane table {
+  color: white;
+}
+
+#discover-games .tab-pane table tbody tr th,
+#discover-games .tab-pane table tbody tr td {
+  border-top: 0;
+  border-bottom: 1px solid var(--dark-yellow);
+}
+
+#discover-games .tab-pane table tbody tr th {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#discover-games .tab-pane table tr th img {
+  width: 8.5rem;
+  height: 4rem;
+}
+
+#discover-games .tab-pane table tr th,
+#discover-games .tab-pane table tr td {
+  height: 4rem;
+}
+
+#discover-games .tab-pane table tr td > .discount {
+  height: 100%;
+}
+
+#discover-games .tab-pane table tr {
+  cursor: pointer;
+}
+
+#discover-games .tab-pane table tr:hover {
+  background-color: var(--dark-yellow);
+}
+
+/* Featured*/
+#featured > div.d-flex {
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* top footer */
+#top-footer {
+  background-color: var(--dark-gray);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+#top-footer ul li a {
+  color: var(--whitish);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+ul li a:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+.footer-social a {
+  color: var(--gray-footer-links);
+  font-size: 20px;
+}
+
+.footer-social a.facebook:hover {
+  color: var(--facebook-link);
+  text-decoration: none;
+}
+.footer-social a.twitter:hover {
+  color: var(--twitter-link);
+  text-decoration: none;
+}
+.footer-social a.twitch:hover {
+  color: var(--twitch-purple);
+  text-decoration: none;
+}
+
+/* Middle footer */
+#middle-footer {
+  background-color: var(--light-gray);
+}
+#middle-footer,
+#bottom-footer {
+  color: var(--gray-footer-links);
+  font-size: 12px;
+}
+
+#middle-footer ul li,
+#bottom-footer ul li {
+  margin-right: 0.5rem;
+}
+
+#middle-footer ul li a,
+#bottom-footer ul li a {
+  color: var(--gray-footer-links);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.selected {
+  color: #c781db !important;
+}
+
+.galaxy-button {
+  background: url(assets/galaxy_button_bg.jpg);
+  color: white !important;
+  font-size: 16px;
+  line-height: 13px;
+  border-radius: 10px;
+  border: 2px solid rgb(255 255 255 / 21%);
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 28%);
+  cursor: pointer;
+}
+
+.galaxy-button:hover {
+  border: 6px solid rgb(255 255 255 / 21%);
+}
+
+.for-windows {
+  font-size: 10px;
+}
+/* bottom footer */
+#bottom-footer {
+  background: url(assets/navbarbg.jpg) repeat-x bottom center var(--dark-gray);
+}
+
+#bottom-footer img {
+  width: 5rem;
 }
