@@ -348,16 +348,15 @@ div.big-discount-bundle {
 /* top footer */
 #top-footer {
   background-color: var(--dark-gray);
-  height: 4rem;
 }
 
-#top-footer ul {
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-#top-footer ul li {
+ul li {
   margin-right: 1rem;
   display: inline-block;
 }
@@ -365,10 +364,11 @@ div.big-discount-bundle {
 #top-footer ul li a {
   color: var(--whitish);
   font-size: 14px;
+  cursor: pointer;
 }
 
-#top-footer ul li a:hover {
-  color: white;
+ul li a:hover {
+  color: white !important;
   text-decoration: none;
 }
 
@@ -393,7 +393,22 @@ div.big-discount-bundle {
 /* Middle footer */
 #middle-footer {
   background-color: var(--light-gray);
-  height: 6rem;
+  color: var(--gray-footer-links);
+  font-size: 12px;
+}
+
+#middle-footer ul li {
+  margin-right: 0.5rem;
+}
+
+#middle-footer ul li a {
+  color: var(--gray-footer-links);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.selected {
+  color: #c781db !important;
 }
 
 /* bottom footer */

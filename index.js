@@ -207,6 +207,16 @@ window.onload = function () {
   for (const tableBody of tableBodiesArray) {
     generate10TableRows(tableBody, gameCounter)
   }
+
+  //toggle select to language and currency links
+  const languageCurrencyLinks = document.querySelectorAll(
+    "#middle-footer ul li a"
+  )
+  languageCurrencyLinks.forEach((link) =>
+    link.addEventListener("click", (e) =>
+      e.currentTarget.classList.toggle("selected")
+    )
+  )
 }
 
 // game counter to increment each time we add cards
