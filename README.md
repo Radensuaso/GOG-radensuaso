@@ -14,6 +14,4 @@ In the beginning it was everything hard coded, but later I decided to programmat
 
 ## Launch
 
-To see this website rendered, just press this link https://radensuaso.github.io/GOG-template/.
-
-Enjoy! :)
+To see this website rendered, just press this link https://radensuaso.github.io/GOG-radensuaso
